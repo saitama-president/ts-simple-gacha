@@ -1,13 +1,12 @@
-import Express from "Express";
+import Express from "express";
 
 const app = Express();
 const LISTEN_PORT= 4999;
 
 app.listen(LISTEN_PORT,()=>{
-  console.log(`Start ${LISTEN_PORT}`);
+  console.log(`Start PORT = ${LISTEN_PORT}`);
 });
 
-console.log("OK");
 
 app.get("/",(req:Express.Request,res:Express.Response)=>{
   res.json([

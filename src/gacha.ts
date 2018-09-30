@@ -1,19 +1,28 @@
 
-interface GachaInterface{
-  public Cast();
-}
 
 
 namespace SaitamaTec.SimpleGacha{
-  export default abstract class Gacha implements GachaInterface{
+  interface GachaInterface{
+    Cast():GachaItem;
+  }
+  
+  export abstract class Gacha implements GachaInterface{
+    
+
 
     public Cast():GachaItem{
       return null;
     }
   }
+
+  export class GachaTable{
+
+  }
+
   export class GachaItem{
     public Name:string;
     public Id:number;
+
     public construct($id:number,$name:string){
 
     }
@@ -21,8 +30,5 @@ namespace SaitamaTec.SimpleGacha{
 
 }
 
-export class SimpleGacha extends Gacha{
-  public Cast():{
-    console.log("GachaOk");
-  }
-}
+
+export default SaitamaTec.SimpleGacha.Gacha;

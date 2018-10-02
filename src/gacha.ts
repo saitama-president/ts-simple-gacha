@@ -1,10 +1,13 @@
 
-interface GachaInterface{
-  public Cast();
-}
 
 namespace SaitamaTec.SimpleGacha{
-  export default abstract class Gacha implements GachaInterface{
+  interface GachaInterface{
+    Cast():GachaItem;
+  }
+  
+  export abstract class Gacha implements GachaInterface{
+    
+
 
     private $name:string;
     public get Name():string{
@@ -33,6 +36,7 @@ namespace SaitamaTec.SimpleGacha{
   export class GachaItem{
     public Name:string;
     public Id:number;
+
     public construct($id:number,$name:string){
 
     }
@@ -65,6 +69,7 @@ namespace SaitamaTec.SimpleGacha{
   }
 
 }
+
 
 
 export default SaitamaTec.SimpleGacha.Gacha;

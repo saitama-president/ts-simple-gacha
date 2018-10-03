@@ -1,9 +1,12 @@
 import { assert } from "chai"
-import Gacha from "../src/gacha";
+import {
+  Gacha,
+  GachaItem
+} from "../src/gacha";
 
 export class SimpleGacha extends Gacha{
-  public Cast(){
-    console.log("GachaOk");
+  public Pick(){
+    return null;
   }
 }
 
